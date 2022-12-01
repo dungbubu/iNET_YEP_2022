@@ -149,7 +149,7 @@ h3 {
 
 
 /* ANIMATION */
-.smooth {transition: all 800ms linear;}
+.smooth {transition: all 1000ms linear;}
 
 /* .content.active {opacity: 0;} */
 .header_NeonLight.active, .header_WhiteLight.active, .header_BlueLight.active,
@@ -158,6 +158,8 @@ h3 {
 .footer_MeshLight.active, .footer_Mesh.active, .footer_Glass.active {top: 100vh;}
 .right_WireLight.active, .right_Wire.active {right: -50%; opacity: 20%;}
 .left_WireLight.active, .left_Wire.active {left: -50%; opacity: 20%;}
+.bubble.active {transform: scale(1.2) rotate(20deg) translate(-50%, -50%);}
+.hexMesh.active {transform: scale(1.2) translate(-50%, -50%);}
 .sub_Background.active {height: 100vh;}
 
 
