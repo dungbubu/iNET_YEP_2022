@@ -69,8 +69,6 @@ section {
   background-position: center;
   overflow: hidden;
 }
-
-.content {z-index: 21; width: 100%; text-align: center;}
 h1 {
   position: relative;
   -moz-text-fill-color: transparent;
@@ -90,6 +88,24 @@ h3 {
   top: 45%;  left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+/* ------------ ------------ */
+/* ------------ ------------ */
+.hud {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+.hud_Interface {
+  height: 90vh;
+}
+
+
+/* ------------ ------------ */
+/* ------------ ------------ */
+.content {z-index: 21; width: 100%; text-align: center;}
 
 .headerDecor img, .footerDecor img {
   position: absolute;
