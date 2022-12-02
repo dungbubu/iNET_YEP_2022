@@ -21,8 +21,25 @@
 
 
 <body>
+
+  <img class="hud_Hole mbmColorDodge smooth3" src="./Image/hud/hud_Hole.png" alt="">
+  
   <div class="hud smooth1">
       <img class="hud_Interface smooth1" src="./Image/hud/hud.png" alt="">
+
+      <div class="title2 smooth4">
+        <p>See you</p>
+        <p>Soon</p>
+        <button onclick="home()">
+            <h3>Home</h3>
+            <img src="./Image/button/right_Btn.png" alt=""></a>
+        </button>
+      </div>
+
+      <div class="contentPage3 smooth3">
+        <p class="bigtypoTime smooth3">Thời gian</p>
+        <p class="bigtypoDate smooth3">24.12</p>
+      </div>
 
 
       <button id="backP3" class="btnBack smooth1" onclick="backPage2()">
@@ -111,14 +128,28 @@
 
     function backPage1() {$('.smooth1').removeClass('active');}
     function nextPage3() {
+      $('.smooth3').addClass('active');
       $('.smooth2').removeClass('active');
       $('#nextP2, #backP2').hide();
       $('#nextP3, #backP3').show();
     }
 
     function backPage2() {
+      $('.smooth2').addClass('active');
+      $('.smooth3').removeClass('active');
       $('#nextP3, #backP3').hide();
       $('#nextP2, #backP2').show();
+    }
+    function nextPage4() {
+      $('.smooth4').addClass('active');
+      $('.smooth3, .smooth1').removeClass('active');
+      $('.title').hide();
+      $('.title2').show();
+    }
+
+    function home() {
+      $('.title').show();
+      $('.title2').hide();
     }
 
     $(document).ready(function(){
