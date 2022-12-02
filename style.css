@@ -15,7 +15,7 @@
 
 /* ------------ --GENERAL-- ------------ */
 * {box-sizing: border-box; margin: 0; padding: 0; border: 0;}
-html {scroll-behavior: smooth; font-size: 62.5%;}
+html {scroll-behavior: smooth1; font-size: 62.5%;}
 img {display: block;}
 a, a:hover, a:focus, a:visited {color: inherit; text-decoration: none;}
 button {font-size: inherit; background-color: transparent;}
@@ -93,7 +93,7 @@ h3 {
 /* ------------ ------------ */
 .hud {
   position: absolute;
-  top: 50%; left: 50%;
+  top: -100%; left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
 }
@@ -104,7 +104,14 @@ h3 {
   z-index: 33;
 }
 
-.contentPage2 {z-index: 35;}
+
+.contentPage2 {
+  position: absolute;
+  bottom: -100%; left: 50%;
+  transform: translateX(-50%);
+  z-index: 41;
+  opacity: 0;
+}
 .contentPage2 span {
   display: block;
   text-align: center;
@@ -114,15 +121,21 @@ h3 {
   margin-bottom: -8px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
-
 .owl-carousel {
+  position: absolute;
+  top: 46%; left: 50%;
+  transform: translate(-50%, -50%);
   width: 75%;
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 34;
+  z-index: 40;
 }
-.owl-carousel item {width: 100%;}
+.owl-carousel img {width: 100%;}
+
+.hud button {position: absolute; z-index: 39; opacity: 0;}
+.hud .btnBack {left: 50%; bottom: 2%;}
+.hud .btnNext {right: 50%; bottom: 2%;}
 
 .hud_Fill {
   position: absolute;
@@ -133,6 +146,7 @@ h3 {
 .hudPad {
   position: absolute;
   z-index: 31;
+  opacity: 60%;
 }
 .top_Pad {
   top: 0; left: 50%;
@@ -153,11 +167,6 @@ h3 {
   top: 50%; left: 0;
   transform: translateY(-50%);
   height: 35.2vh;
-}
-.contentPage2 {
-  position: absolute;
-  bottom: 6vh; left: 50%;
-  transform: translateX(-50%);
 }
 
 
@@ -223,23 +232,42 @@ h3 {
 
 
 /* ANIMATION */
-.smooth {transition: all 1s 1s linear;}
-
-/* .title.active {opacity: 0; transition-delay: 500ms;} */
-.title.active h1 {
-  -webkit-animation: flicker-out-1 2s linear both;
-	        animation: flicker-out-1 2s linear both;
+.hud.active {top: 50%;}
+.contentPage2.active {opacity: 100%; bottom: 10vh;}
+.bigtypoWhite.active {
+  -webkit-animation: flicker-in-1 1s 400ms linear both;
+	        animation: flicker-in-1 1s 400ms linear both;
 }
+.bigtypo.active {
+  -webkit-animation: flicker-in-1 1s 400ms linear both;
+	        animation: flicker-in-1 1s 400ms linear both;
+}
+.hud .btnBack.active {left: 10%; opacity: 100%;}
+.hud .btnNext.active {right: 10%; opacity: 100%;}
+.top_Pad.active, .bottom_Pad.active, .right_Pad.active, .left_Pad.active {
+  -webkit-animation: fade 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+	        animation: fade 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+}
+
+
+.smooth1 {transition: all 1s 200ms linear;}
+
+
+.title.active {opacity: 0; transition-delay: 500ms;}
 .title.active h2, .title.active button {
-  -webkit-animation: flicker-out-1 2s 200ms linear both;
-	        animation: flicker-out-1 2s 200ms linear both;
+  -webkit-animation: flicker-out-1 1s 200ms linear both;
+	        animation: flicker-out-1 1s 200ms linear both;
+}
+.title.active h1 {
+  -webkit-animation: flicker-out-1 1s linear both;
+	        animation: flicker-out-1 1s linear both;
 }
 .header_NeonLight.active, .header_WhiteLight.active, .header_BlueLight.active,
 .header_MeshLight.active, .header_Mesh.active {bottom: 100vh;}
 .footer_NeonLight.active, .footer_WhiteLight.active, .footer_BlueLight.active {top: 100vh;}
 .footer_MeshLight.active, .footer_Mesh.active, .footer_Glass.active {top: 100vh;}
-.right_WireLight.active, .right_Wire.active {right: -50%; opacity: 20%;}
-.left_WireLight.active, .left_Wire.active {left: -50%; opacity: 20%;}
+.right_WireLight.active, .right_Wire.active {right: -600px; transform: translateY(-50%) scale(1.4);}
+.left_WireLight.active, .left_Wire.active {left: -600px; transform: translateY(-50%) scale(1.4);}
 .bubble.active {transform: translate(-50%, -50%) scale(2) rotate(20deg);}
 .hexMesh.active {transform: translate(-50%, -50%) scale(2);}
 .sub_Background.active {height: 100vh;}
@@ -248,6 +276,207 @@ h3 {
 
 
 /* KEYFRAME */
+@-webkit-keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {opacity: 60%;}
+  50% {opacity: 100%;}
+  100% {opacity: 60%;}
+}
+@keyframes fade {
+  0% {opacity: 60%;}
+  50% {opacity: 100%;}
+  100% {opacity: 60%;}
+}
 @-webkit-keyframes flicker-out-1 {
   0% {
     opacity: 1;
@@ -502,6 +731,10 @@ h3 {
     opacity: 0;
   }
 }
+
+
+
+
 
 
 
