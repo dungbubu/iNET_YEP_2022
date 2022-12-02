@@ -6,22 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iNET Year End Party 2022</title>
 
-    <!-- CSS Chung -->
-    <link rel="stylesheet" href="./style.css">
     <!-- jQuery library -->
     <script src="./Lib/jQuery-3.5.1/jquery-3.5.1.js"></script>
+    <!-- Owl library -->
+    <link rel="stylesheet" href="./Lib/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <script src="./Lib/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    
+    <!-- CSS Chung -->
+    <link rel="stylesheet" href="./style.css">
 </head>
+
+
+
+
+
 <body>
   <div class="hud">
-    <img class="hud_Interface" src="./Image/hud/hud.png" alt="">
+      <img class="hud_Interface" src="./Image/hud/hud.png" alt="">
+
+      <div class="contentPage2">
+        <span class="bigtypoWhite">Địa</span>
+        <span class="bigtypo">Điểm</span>
+      </div>
+
+      <div class="owl-carousel pstAbs5050">
+        <img src="./Image/slider/slide1.png" alt="">
+        <img src="./Image/slider/slide2.png" alt="">
+        <img src="./Image/slider/slide3.png" alt="">
+      </div>
+
+      <img class="hud_Fill" src="./Image/hud/hudFill.png" alt="">
+      <img class="top_Pad hudPad" src="./Image/hud/top_Pad.png" alt="">
+      <img class="bottom_Pad hudPad" src="./Image/hud/bottom_Pad.png" alt="">
+      <img class="right_Pad hudPad" src="./Image/hud/right_Pad.png" alt="">
+      <img class="left_Pad hudPad" src="./Image/hud/left_Pad.png" alt="">
   </div>
 
 
   <section>
-    <!-- <div class="content pstAbs5050 smooth">
+    <!-- <div class="title pstAbs5050 smooth">
       <h2>You were invited to</h2>
       <h1>iNET Party 2022</h1>
-      <button onclick="addActive()">
+      <button onclick="nextPage2()">
           <h3>Let's go</h3>
           <img src="./Image/button/left_Btn.png" alt=""></a>
       </button>
@@ -61,7 +87,12 @@
   </section>
 
   <script type="text/javascript">
-    function addActive() {$('.smooth').toggleClass('active');}
+    function nextPage2() {$('.smooth').toggleClass('active');}
+
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({items: 1})
+    });
+    
   </script>
 </body>
 </html>
