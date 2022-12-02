@@ -24,22 +24,33 @@
   <div class="hud smooth1">
       <img class="hud_Interface smooth1" src="./Image/hud/hud.png" alt="">
 
-      <div class="contentPage2 smooth1">
-        <span class="bigtypoWhite smooth1">Địa</span>
-        <span class="bigtypo smooth1">Điểm</span>
+
+      <button id="backP3" class="btnBack smooth1" onclick="backPage2()">
+        <h3>Back</h3>
+        <img src="./Image/button/right_Btn.png" alt=""></a>
+      </button>
+      <button id="nextP3" class="btnNext smooth1" onclick="nextPage4()">
+        <h3>Next</h3>
+        <img src="./Image/button/left_Btn.png" alt=""></a>
+      </button>
+
+
+      <div class="contentPage2 smooth1 smooth2">
+        <span class="bigtypoWhite smooth1 smooth2">Địa</span>
+        <span class="bigtypo smooth1 smooth2">Điểm</span>
       </div>
 
-      <div class="owl-carousel smooth1">
+      <div class="owl-carousel smooth1 smooth2">
         <img src="./Image/slider/slide1.png" alt="">
         <img src="./Image/slider/slide2.png" alt="">
         <img src="./Image/slider/slide3.png" alt="">
       </div>
 
-      <button class="btnBack smooth1" onclick="backPage1()">
+      <button id="backP2" class="btnBack smooth1" onclick="backPage1()">
         <h3>Back</h3>
         <img src="./Image/button/right_Btn.png" alt=""></a>
       </button>
-      <button class="btnNext smooth1" onclick="nextPage3()">
+      <button id="nextP2" class="btnNext smooth1" onclick="nextPage3()">
         <h3>Next</h3>
         <img src="./Image/button/left_Btn.png" alt=""></a>
       </button>
@@ -97,8 +108,18 @@
 
   <script type="text/javascript">
     function nextPage2() {$('.smooth1').addClass('active');}
+
     function backPage1() {$('.smooth1').removeClass('active');}
-    function nextPage3() {$('.smooth1').addClass('active');}
+    function nextPage3() {
+      $('.smooth2').removeClass('active');
+      $('#nextP2, #backP2').hide();
+      $('#nextP3, #backP3').show();
+    }
+
+    function backPage2() {
+      $('#nextP3, #backP3').hide();
+      $('#nextP2, #backP2').show();
+    }
 
     $(document).ready(function(){
       $('.owl-carousel').owlCarousel({items: 1})

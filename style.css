@@ -123,7 +123,7 @@ h3 {
 }
 .owl-carousel {
   position: absolute;
-  top: 46%; left: 50%;
+  top: -50%; left: 50%;
   transform: translate(-50%, -50%);
   width: 75%;
   display: flex;
@@ -242,6 +242,7 @@ h3 {
   -webkit-animation: flicker-in-1 1s 400ms linear both;
 	        animation: flicker-in-1 1s 400ms linear both;
 }
+.owl-carousel.active {top: 46%;}
 .hud .btnBack.active {left: 10%; opacity: 100%;}
 .hud .btnNext.active {right: 10%; opacity: 100%;}
 .top_Pad.active, .bottom_Pad.active, .right_Pad.active, .left_Pad.active {
