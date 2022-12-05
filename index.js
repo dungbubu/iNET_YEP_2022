@@ -1,4 +1,7 @@
-$('.owl-carousel').owlCarousel({items: 1});
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({items: 1});
+});
+
 
 function nextPage2() {
   $('.page0, .page1, .page2').addClass('active');
