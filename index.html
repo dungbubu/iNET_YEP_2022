@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./Lib/OwlCarousel2-2.3.4/owl.theme.default.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./animation.css">
 </head>
 
 
@@ -24,21 +25,60 @@
 
 <body class="smooth">
   <!-- Noi dung Page 4  -->
-  <div class="contentPage4 pstAbs5050 page4">
+  <!-- <div class="contentPage4 pstAbs5050 page4">
     <p class="txt_subtitle">See you</p>
     <p class="txt_title txt_decor">Soon</p>
     <button onclick="gobackhome()">
         <p>Home</p>
         <img src="./Image/button/right_Btn.png" alt=""></a>
     </button>
-  </div>
+  </div> -->
 
   <div class="hud page1">
-      <img class="hud_Interface desktop page1" src="./Image/hud/hud.png" alt="">
-      <img class="hud_Interface mobile page1" src="./Image/hud/hud_mobile.png" alt="">
+      <div class="hud_Interface">
+        <img class="hud_Interface_img pstAbs5050 desktop page1" src="./Image/hud/hud.png"        alt="">
+        <img class="hud_Interface_img pstAbs5050 mobile page1"  src="./Image/hud/hud_mobile.png" alt="">
 
+        <!-- Hud Decor  -->
+        <div class="hud_decor desktop">
+          <img class="hud_Fill          page1" src="./Image/hud/hudFill.png" alt="">
+          <img class="top_Pad    hudPad page1" src="./Image/hud/top_Pad.png" alt="">
+          <img class="bottom_Pad hudPad page1" src="./Image/hud/bottom_Pad.png" alt="">
+          <img class="right_Pad  hudPad page1" src="./Image/hud/right_Pad.png" alt="">
+          <img class="left_Pad   hudPad page1" src="./Image/hud/left_Pad.png" alt="">
+        </div>
+        <div class="hud_decor mobile">
+          <img class="hud_Fill          page1" src="./Image/hud/hudFill_mobile.png" alt="">
+          <img class="top_Pad    hudPad page1" src="./Image/hud/top_Pad_mobile.png" alt="">
+          <img class="bottom_Pad hudPad page1" src="./Image/hud/bottom_Pad_mobile.png" alt="">
+        </div>
+
+        <!-- Noi dung Page 2  -->
+        <div>
+          <div class="contentPage2 page2">
+            <p class="txt_title txt_decor">Địa điểm</p>
+            <p class="txt_subtitle txt_cl_white">Nesta - 83 Hào Nam</p>
+          </div>
+    
+          <div class="owl-carousel pstAbs5050 page2">
+            <div class="item"><img src="./Image/slider/slide1.jpg" alt=""></div>
+            <div class="item"><img src="./Image/slider/slide2.jpg" alt=""></div>
+            <div class="item"><img src="./Image/slider/slide3.jpg" alt=""></div>
+          </div>
+    
+          <button id="backP2" class="btnBack page1" onclick="backPage1()">
+            <p>Back</p>
+            <img src="./Image/button/right_Btn.png" alt=""></a>
+          </button>
+          <button id="nextP2" class="btnNext page1" onclick="nextPage3()">
+            <p>Next</p>
+            <img src="./Image/button/left_Btn.png" alt=""></a>
+          </button>
+        </div>
+      </div>
+      
       <!-- Noi dung Page 3  -->
-      <div>
+      <!-- <div>
         <div class="contentPage3 page3">
           <p class="txt_subtitle txt_cl_white page3">Thời gian</p>
           <p class="txt_bigtypo txt_decor page3">18.12</p>
@@ -54,62 +94,11 @@
           <p>Next</p>
           <img src="./Image/button/left_Btn.png" alt=""></a>
         </button>
-      </div>
-
-      <!-- Noi dung Page 2  -->
-      <div>
-        <div class="contentPage2 page2">
-          <p class="txt_title txt_decor">Địa điểm</p>
-          <p class="txt_subtitle txt_cl_white">Nesta - 83 Hào Nam</p>
-        </div>
-  
-        <div class="owl-carousel pstAbs5050 page2">
-          <img src="./Image/slider/slide1.jpg" alt="">
-          <img src="./Image/slider/slide2.jpg" alt="">
-          <img src="./Image/slider/slide3.jpg" alt="">
-        </div>
-        <!-- <div class="owl-carousel pstAbs5050 mobile page2">
-          <img src="./Image/slider/slide1_mobile.jpg" alt="">
-          <img src="./Image/slider/slide2_mobile.jpg" alt="">
-          <img src="./Image/slider/slide3_mobile.jpg" alt="">
-          <div class="card">
-            <p class="txt_subtitle txt_cl_white">Nhà hàng Nesta</p>
-            <p class="txt_subtitle txt_cl_white">83 Hào Nam</p>
-          </div>
-        </div> -->
-  
-        <button id="backP2" class="btnBack page1" onclick="backPage1()">
-          <p>Back</p>
-          <img src="./Image/button/right_Btn.png" alt=""></a>
-        </button>
-        <button id="nextP2" class="btnNext page1" onclick="nextPage3()">
-          <p>Next</p>
-          <img src="./Image/button/left_Btn.png" alt=""></a>
-        </button>
-      </div>
-
-      <!-- Hud Decor  -->
-      <div class="hud_decor desktop">
-        <img class="hud_Fill          page1" src="./Image/hud/hudFill.png" alt="">
-        <img class="top_Pad    hudPad page1" src="./Image/hud/top_Pad.png" alt="">
-        <img class="bottom_Pad hudPad page1" src="./Image/hud/bottom_Pad.png" alt="">
-        <img class="right_Pad  hudPad page1" src="./Image/hud/right_Pad.png" alt="">
-        <img class="left_Pad   hudPad page1" src="./Image/hud/left_Pad.png" alt="">
-      </div>
-      <div class="hud_decor mobile">
-        <img class="hud_Fill          page1" src="./Image/hud/hudFill_mobile.png" alt="">
-        <img class="top_Pad    hudPad page1" src="./Image/hud/top_Pad_mobile.png" alt="">
-        <img class="bottom_Pad hudPad page1" src="./Image/hud/bottom_Pad_mobile.png" alt="">
-        <img class="right_Pad  hudPad page1" src="./Image/hud/right_Pad_mobile.png" alt="">
-        <img class="left_Pad   hudPad page1" src="./Image/hud/left_Pad_mobile.png" alt="">
-      </div>
+      </div> -->
   </div>
 
-  <img class="hud_Hole pstAbs5050 mbmColorDodge desktop page3" src="./Image/hud/hud_Hole.png" alt="">
-  <img class="hud_Hole pstAbs5050 mbmColorDodge mobile page3" src="./Image/hud/hud_Hole_mobile.png" alt="">
-
+  <!-- Noi dung Page 1  -->
   <section>
-    <!-- Noi dung Page 1  -->
     <div class="contentPage1 pstAbs5050 page0">
       <p class="txt_subtitle">You were invited to</p>
       <p class="txt_title txt_decor">iNET Party 2022</p>
@@ -151,6 +140,11 @@
       <img class="hexMesh pstAbs5050 page0" src="./Image/Background/hexMesh.png" alt="Hexagon Image">
       <img class="sub_Background pstAbs5050 page0" src="./Image/Background/sub_Background.png" alt="Sub background">
     </div>
+
+
+    <!-- Hud Hole  -->
+    <img class="hud_Hole mbmColorDodge desktop page3" src="./Image/hud/hud_Hole.png" alt="">
+    <img class="hud_Hole mbmColorDodge mobile page3" src="./Image/hud/hud_Hole_mobile.png" alt="">
   </section>
 
   <!-- JS -->
