@@ -154,15 +154,16 @@
 
   /* ------------ --TYPOGRAPHY-- ------------ */
   p {font-size: 1.4rem;}
-  button p {font-size: 1.6rem; top: 45%; left: 50%; transform: translate(-50%, -50%);}
-  button img {height: 50px;}
-  .txt_title {font-size: 3.2rem;}
-  .txt_subtitle {font-size: 1.8rem;}
-  .txt_bigtypo {font-size: 8rem;}
+  button p {font-size: 2rem; top: 45%; left: 50%; transform: translate(-50%, -50%);}
+  button img {height: 40px;}
+  .txt_title {font-size: 5rem;}
+  .txt_subtitle {font-size: 3rem;}
+  .txt_subsubtitle {font-size: 2rem; line-height: 2rem;}
+  .txt_bigtypo {font-size: 5rem;}
   .txt_decor {
-    -moz-text-stroke-width: 0.8px;
-    -webkit-text-stroke-width: 0.8px;
-    text-shadow: -2px 2px #83FFFF,
+    -moz-text-stroke-width: 0.2px;
+    -webkit-text-stroke-width: 0.2px;
+    text-shadow: -0px 0px #83FFFF,
                   0px 0px 10px rgba(0, 240, 255, 0.8);
   }
 
@@ -194,14 +195,45 @@
 
 
   /* HUD------------ ------------ */
-  .btnBack {left: 50%; bottom: -1.5vh;}
-  .btnBack.active {left: -1vh;}
-  .btnNext {right: 50%; bottom: -1.5vh;}
-  .btnNext.active {right: -1vh;} 
-  .top_Pad, .bottom_Pad {height: 2.7vh;}
+  .hud_Interface {height: 70vh; width: calc(70vh / 1510 * 924); overflow: hidden;}
+  .hud_Interface_img {width: calc(70vh / 1510 * 924);}
+
+
+  /* HUD BUTTON------------ ------------ */
+  .btnBack {left: 50%; bottom: -8px;}
+  .btnBack.active {left: -40px;}
+  .btnNext {right: 50%; bottom: -8px;}
+  .btnNext.active {right: -40px;} 
+  .top_Pad, .bottom_Pad {height: 2.2vh;}
+  .right_Pad, .left_Pad {height: 24.2vh;}
+
+
+  /* HUD HOLE------------ ------------ */
+  .hud_Hole {height: 70vh;}
+
+
+  /* PAGE 1------------ ------------ */
+  .contentPage1 .txt_title {margin: -20px 0 -5px 0;}
 
 
   /* PAGE 2------------ ------------ */
-  .contentPage2.active {bottom: 10vh;}
-  .owl-carousel {width: 100%; height: 75%;}
+  .contentPage2.active {bottom: 35px;}
+  .contentPage2 .txt_subsubtitle {margin-top: -8px;}
+  .owl-carousel.active {top: 0; transform: translate(-50% , 0);}
+  .owl-carousel, .owl-carousel .item, .owl-carousel .item img {
+    height: calc(70vh / 100 * 85);
+    width: calc(70vh / 1510 * 924 / 100 * 100);
+  }
+
+
+  /* PAGE 3------------ ------------ */
+  .contentPage3 .txt_bigtypo {margin: -10px 0 -25px 0;}
+
+
+  /* PAGE 4------------ ------------ */
+  .contentPage4.active {top: 10px;}
+
+
+  /* PAGE 5------------ ------------ */
+  .contentPage5 .txt_title {margin: -20px 0 -5px 0;}
 }
