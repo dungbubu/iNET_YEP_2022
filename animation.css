@@ -135,6 +135,14 @@
   89.9% {opacity: 1; -webkit-box-shadow: none; box-shadow: none;}
   90% {opacity: 0; -webkit-box-shadow: none; box-shadow: none;}
   100% {opacity: 0;}}
+@-webkit-keyframes shadow-fade {
+  0% {box-shadow: 0px 0px 20px rgba(0, 240, 255, 0.8);}
+  50% {box-shadow: 0px 0px 10px rgba(0, 240, 255, 0.8);}
+  100% {box-shadow: 0px 0px 20px rgba(0, 240, 255, 0.8);}}
+@keyframes shadow-fade {
+  0% {box-shadow: 0px 0px 20px rgba(0, 240, 255, 0.8);}
+  50% {box-shadow: 0px 0px 10px rgba(0, 240, 255, 0.8);}
+  100% {box-shadow: 0px 0px 20px rgba(0, 240, 255, 0.8);}}
 
 
 
@@ -231,7 +239,12 @@
 
 
   /* PAGE 4------------ ------------ */
-  .contentPage4.active {top: 10px;}
+  .illusPage4 {flex-direction: column;}
+  .pad_bg {
+    margin: 10px auto;
+    width:  calc(70vh * 1509 / 924 * 80 / 100 * 30 / 100);
+    height: calc(70vh * 1509 / 924 * 80 / 100 * 30 / 100 / 408 * 113);
+  }
 
 
   /* PAGE 5------------ ------------ */

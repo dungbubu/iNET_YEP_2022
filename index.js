@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('.owl-carousel').owlCarousel({items: 1});
   }, 1000);
 
-  $('#nextP3, #backP3, #nextP4, #backP4').hide();
+  $('#nextP3, #backP3, #nextP4, #backP4, .contentPage5').hide();
   $('#nextP2, #backP2, .contentPage1').show();
 });
 
@@ -44,11 +44,12 @@ function backPage3() {
 function nextPage5() {
   $('.page5').addClass('active');
   $('.page0, .page1, .page4').removeClass('active');
-  $('.contentPage1').hide();
+  $('#nextP4, #backP4, .contentPage1').hide();
+  $('.contentPage5').show();
 }
 
 function gobackhome() {
   $('.page5').removeClass('active');
-  $('#nextP4, #backP4').hide();
+  $('.contentPage5').hide();
   $('#nextP2, #backP2, .contentPage1').show();
 }
